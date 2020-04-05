@@ -121,7 +121,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ MODKEY|ControlMask|ShiftMask, XK_q,      quit,           {1} },
+	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
 	{ 0, XF86XK_AudioMute, spawn, SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --allow-boost -i 3 && kill -44 $(pidof dwmblocks)") },
  	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --allow-boost -d 3 && kill -44 $(pidof dwmblocks)") },
