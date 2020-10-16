@@ -3,6 +3,7 @@
 
 include config.mk
 
+INI = dwm.desktop
 SRC = drw.c dwm.c util.c
 OBJ = ${SRC:.c=.o}
 
@@ -43,9 +44,13 @@ install: all
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	mkdir -p /usr/share/xsessions/
+	cp -f ${INI} /usr/share/xsessions/
+	chmod 644 /usr/share/xsessions/${INI}
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
-		${DESTDIR}${MANPREFIX}/man1/dwm.1
+		${DESTDIR}${MANPREFIX}/man1/dwm.1\
+		/usr/share/xsessions/${INI}
 
 .PHONY: all options clean dist install uninstall
