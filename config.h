@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "URxvt",            NULL,       "urxvt",    1,            0,           -1 },
 	{ "URxvt",            NULL,       "spt",      1 << 6,       0,           -1 },
 
+	{ "Brave",            NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Chromium",         NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "firefox",          NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Google-Chrome",    NULL,       NULL,       1 << 1,       0,           -1 },
