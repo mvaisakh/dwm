@@ -139,6 +139,8 @@ static Key keys[] = {
  	{ 0, XF86XK_AudioNext, spawn, SHCMD("playerctl next") },
  	{ 0, XF86XK_AudioPause, spawn, SHCMD("playerctl play-pause") },
 	{ 0, XF86XK_AudioPlay, spawn, SHCMD("playerctl play-pause") },
+	{ 0, XF86XK_MonBrightnessUp, spawn, SHCMD("xbacklight -inc 15") },
+ 	{ 0, XF86XK_MonBrightnessDown, spawn, SHCMD("xbacklight -dec 15") },
 };
 
 /* button definitions */
