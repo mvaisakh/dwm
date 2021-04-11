@@ -134,9 +134,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
 
-    { 0, XF86XK_AudioMute,                     spawn,          SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pamixer --allow-boost -i 3 && kill -44 $(pidof dwmblocks)") },
-    { 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pamixer --allow-boost -d 3 && kill -44 $(pidof dwmblocks)") },
+    { 0, XF86XK_AudioMute,                     spawn,          SHCMD("pamixer -t; pkill -RTMIN+4 dwmblocks") },
+    { 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pamixer --allow-boost -i 3; pkill -RTMIN+4 dwmblocks") },
+    { 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("pamixer --allow-boost -d 3; pkill -RTMIN+4 dwmblocks") },
     { 0, XF86XK_AudioPrev,                     spawn,          SHCMD("playerctl previous") },
     { 0, XF86XK_AudioNext,                     spawn,          SHCMD("playerctl next") },
     { 0, XF86XK_AudioPause,                    spawn,          SHCMD("playerctl play-pause") },
