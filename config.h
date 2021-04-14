@@ -62,7 +62,7 @@ static const Rule rules[] = {
 	{ "Thunar",           NULL,       NULL,       1 << 3,       0,           -1 },
 
 	{ "code-oss",         NULL,       NULL,       1 << 4,       0,           -1 },
-	{ "Sublime_text",     NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Subl3",            NULL,       NULL,       1 << 4,       0,           -1 },
 
 	{ "vlc",              NULL,       NULL,       1 << 5,       0,           -1 },
 
