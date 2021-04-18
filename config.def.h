@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -38,6 +38,7 @@ static const unsigned int alphas[][3]      = {
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
+static const int CORNER_RADIUS = 10; /* corner radius */
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
