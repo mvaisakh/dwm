@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
-static const int barheight			= 22;		/* 0 means that dwm will calculate bar height, >= 1 means dwm will barheight as bar height */
+static const int barheight	    = 28;		/* 0 means that dwm will calculate bar height, >= 1 means dwm will barheight as bar height */
 static const char *fonts[] = {
  "Meslo LG S:size=9",
  "FontAwesome 5 Free:style=Regular:size=8",
