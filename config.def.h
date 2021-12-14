@@ -42,9 +42,26 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class              instance    title       tags mask     isfloating   monitor */
+	{ "Lxappearance",     NULL,       NULL,       0,            1,           -1 },
+	{ "Pavucontrol",      NULL,       NULL,       0,            1,           -1 },
+
+	{ "URxvt",            NULL,       NULL,       1,            0,           -1 },
+
+	{ "Chromium",         NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "firefox",          NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Google-Chrome",    NULL,       NULL,       1 << 1,       0,           -1 },
+
+	{ "discord",          NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "TelegramDesktop",  NULL,       NULL,       1 << 2,       0,           -1 },
+
+	{ "Nautilus",         NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "Thunar",           NULL,       NULL,       1 << 3,       0,           -1 },
+
+	{ "code-oss",         NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Sublime_text",     NULL,       NULL,       1 << 4,       0,           -1 },
+
+	{ "vlc",              NULL,       NULL,       1 << 5,       0,           -1 },
 };
 
 /* layout(s) */
