@@ -11,10 +11,11 @@ static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int barheight	    = 28;		/* 0 means that dwm will calculate bar height, >= 1 means dwm will barheight as bar height */
 static const char *fonts[] = {
  "Meslo LG S:size=9",
- "FontAwesome 5 Free:style=Regular:size=8",
- "FontAwesome 5 Free:style=Solid:size=8",
- "FontAwesome 5 Brands:style=Regular:size=8",
- "MaterialIcons:size=8",
+ "FontAwesome 6 Free Regular:style=Regular:size=10",
+ "FontAwesome 6 Free:style=Regular:size=8",
+ "FontAwesome 6 Free:style=Solid:size=8",
+ "FontAwesome 6 Brands:style=Regular:size=8",
+ "MaterialIcons:style=Regular:size=9",
  };
 static const char dmenufont[] = "Meslo LG S:size=9";
 static const char col_gray1[]       = "#000000";
@@ -37,7 +38,7 @@ static const unsigned int alphas[][3]      = {
 static const int CORNER_RADIUS = 10; /* corner radius */
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -53,6 +54,7 @@ static const Rule rules[] = {
 	{ "Chromium",         NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "firefox",          NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Google-Chrome",    NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "google-chrome-stable",    NULL,       NULL,       1 << 1,       0,           -1 },
 
 	{ "discord",          NULL,       NULL,       1 << 2,       0,           -1 },
 	{ "TelegramDesktop",  NULL,       NULL,       1 << 2,       0,           -1 },
@@ -74,9 +76,9 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "Tiled",      tile },    /* first entry is default */
+	{ "None",      NULL },    /* no layout function means floating behavior */
+	{ "Mono",      monocle },
 };
 
 /* key definitions */
@@ -96,6 +98,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "urxvt", NULL };
 static const char *scrshotcmd[] = { "scrshot", NULL };
 static const char *browsercmd[] = { "google-chrome-stable", NULL};
+static const char *tgcmd[] = {"Telegram", NULL};
 
 #include <X11/XF86keysym.h>
 
@@ -105,6 +108,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = tgcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
